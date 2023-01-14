@@ -6,6 +6,6 @@ gem 'awesome_print'
 
 gem 'rake'
 
-gem "process-metrics", "~> 0.2.1"
-
 gem 'get_process_mem'
+
+gem 'gruff'
