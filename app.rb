@@ -1,10 +1,10 @@
-require_relative 'metrics.rb'
 require 'pidof'
+require_relative 'metrics.rb'
 
 class RPID
   def initialize
     @pid = Pidof.find('neovide')
-    readfile @pid
+    self.readfile @pid
   end
 
   private
