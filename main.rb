@@ -6,11 +6,11 @@ module Socket
     def self.write_f
       spawn "pgrep neovide >> pid.txt"
 
-      sleep 3
+      sleep 1
       self.rfile
     end
 
-    protected
+    private
 
     def self.rfile
       read_file = RPID.new
