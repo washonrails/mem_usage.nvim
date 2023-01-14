@@ -10,12 +10,12 @@ class RPID
   private
  
   def readfile pid
-    file = File.open('pid.txt')
-
-    file.each { |line | puts line}
+    line = IO.readlines('pid.txt').last
+    call_metrics line
   end
 
   def call_metrics pid
     new_metrics = Metrics.new pid
   end
+
 end
