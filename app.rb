@@ -1,21 +1,13 @@
-require 'pidof'
-require_relative 'metrics.rb'
+require_relative 'main.rb'
 
-class RPID
-  def initialize
-    @pid = Pidof.find('neovide')
-    self.readfile @pid
+module Socket
+  class Process
+    
+    def self.read_f
+      read_file = GPID.get_pid
+    end
+
   end
-
-  private
- 
-  def readfile pid
-    line = IO.readlines('pid.txt').last
-    call_metrics line
-  end
-
-  def call_metrics pid
-    new_metrics = Metrics.new pid
-  end
-
 end
+
+socket = Socket::Process.read_f
