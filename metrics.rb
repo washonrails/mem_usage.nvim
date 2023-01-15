@@ -14,7 +14,7 @@ module Metrics
     end
 
     private
-    
+
     def memory_metrics
 
       pid = Process.spawn "process-metrics --pid #{@pid}"
@@ -25,10 +25,10 @@ module Metrics
 
       Graphics.new @pid if res.eql? 'y'
     end
-    
+
 end
 
-  
+
   class Graphics
 
     def initialize ppid
@@ -42,10 +42,10 @@ end
     def mem_graph
       return yield if block_given?
     end
-    
+
     # def proc_graph
     #   yield if block_given?
     # end
-    
+
   end
 end
